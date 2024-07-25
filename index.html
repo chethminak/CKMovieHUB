@@ -4,132 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CK Movie HUB</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        h1, h2 {
-            text-align: center;
-            color: #333;
-        }
-        .search-container {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .search-container input[type="text"] {
-            padding: 10px;
-            width: 60%;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
-        }
-        .movie-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        .movie-list li {
-            margin-bottom: 20px;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-        }
-        .movie-list li img {
-            max-width: 150px;
-            margin-right: 20px;
-            border-radius: 4px;
-        }
-        .movie-details {
-            flex: 1;
-        }
-        .movie-title {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-        .movie-rating {
-            font-size: 14px;
-            color: #888;
-            margin-bottom: 10px;
-        }
-        .movie-description {
-            font-size: 14px;
-            margin-bottom: 10px;
-        }
-        .movie-link {
-            margin-top: 10px;
-        }
-        .movie-link a {
-            color: #007bff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .movie-link a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file here -->
 </head>
 <body>
-    <div class="container">
-        <h1>Movie Download Website</h1>
-
-        <!-- Search Bar -->
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Search movies...">
-            <button onclick="searchMovies()">Search</button>
+    <header>
+        <div class="container">
+            <h1>Movie Download Website</h1>
+            <form action="search.php" method="GET">
+                <input type="text" name="query" placeholder="Search movies...">
+                <button type="submit">Search</button>
+            </form>
         </div>
+    </header>
 
-        <!-- Movie List -->
-        <ul class="movie-list" id="movieList">
-            <li>
-                <img src="placeholder_image.jpg" alt="Movie Image">
-                <div class="movie-details">
-                    <div class="movie-title">Pacific Rim</div>
-                    <div class="movie-rating">IMDb Rating: 7.5/10</div>
-                    <div class="movie-description">As a war between humankind and monstrous sea creatures wages on, a former pilot and a trainee are paired up to drive a seemingly obsolete special weapon in a desperate effort to save the wor</div>
-                    <div class="movie-link"><a href="https://t.me/LKFileShareBot?start=BQADAQAD3AcAAja82UQNApftqmtUrBYE">Download Movie</a></div>
+    <main>
+        <section id="movies">
+            <div class="container">
+                <!-- Example movie card -->
+                <div class="movie-card">
+                    <img src="movie_image.jpg" alt="Movie Title">
+                    <div class="movie-info">
+                        <h2>Movie Title</h2>
+                        <p>IMDb Rating: 7.5</p>
+                        <a href="telegram_bot_link">Download</a>
+                    </div>
                 </div>
-                <img src="placeholder_image.jpg" alt="Movie Image">
-                <div class="movie-details">
-                    <div class="movie-title">Pacific Rim</div>
-                    <div class="movie-rating">IMDb Rating: 7.5/10</div>
-                    <div class="movie-description">As a war between humankind and monstrous sea creatures wages on, a former pilot and a trainee are paired up to drive a seemingly obsolete special weapon in a desperate effort to save the wor</div>
-                    <div class="movie-link"><a href="https://t.me/LKFileShareBot?start=BQADAQAD3AcAAja82UQNApftqmtUrBYE">Download Movie</a></div>
-                </div>
-        </ul>
-    </div>
+                <!-- Repeat the above movie card structure for each movie -->
+            </div>
+        </section>
+    </main>
 
-    <script>
-        // Example function to search movies (dummy function for illustration)
-        function searchMovies() {
-            var input, filter, ul, li, title, i, txtValue;
-            input = document.getElementById('searchInput');
-            filter = input.value.toUpperCase();
-            ul = document.getElementById('movieList');
-            li = ul.getElementsByTagName('li');
-
-            for (i = 0; i < li.length; i++) {
-                title = li[i].getElementsByClassName('movie-title')[0];
-                txtValue = title.textContent || title.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    li[i].style.display = "";
-                } else {
-                    li[i].style.display = "none";
-                }
-            }
-        }
-    </script>
+    <footer>
+        <div class="container">
+            <p>&copy; All rights reserved by CK Movie HUB.</p>
+        </div>
+    </footer>
 </body>
 </html>
