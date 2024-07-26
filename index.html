@@ -67,9 +67,24 @@
             padding: 20px;
             background-color: #000000;
             color: #FFFFFF;
-            position: fixed;
-            width: 100%;
+            position: relative;
             bottom: 0;
+            width: 100%;
+        }
+
+        .social-icons {
+            margin: 10px 0;
+        }
+
+        .social-icons a {
+            color: #FFFFFF;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.5em;
+        }
+
+        .social-icons a:hover {
+            color: #00E5FF;
         }
     </style>
 </head>
@@ -87,10 +102,16 @@
             <p>IMDb: 8.5</p>
             <p>Actors: Actor 1, Actor 2, Actor 3</p>
             <p>Run Time: 120 mins</p>
+            <p><a href="https://telegram.me/yourbot?start=movie1">Download via Telegram</a></p>
         </div>
         <!-- Add more movies as needed -->
     </div>
     <div class="footer">
+        <div class="social-icons">
+            <a href="https://www.facebook.com/yourpage" target="_blank">&#xf09a;</a>
+            <a href="https://www.whatsapp.com/yourlink" target="_blank">&#xf232;</a>
+            <a href="https://telegram.me/yourbot" target="_blank">&#xf2c6;</a>
+        </div>
         &copy; 2024 CK Movie HUB. All rights reserved.
     </div>
 </body>
