@@ -4,49 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CK Movie HUB</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file here -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #FFFFFF;
+        }
+
+        .neon-text {
+            font-size: 4em;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 20px;
+            text-shadow: 0 0 5px #00E5FF, 0 0 10px #00E5FF, 0 0 20px #00E5FF, 0 0 40px #00E5FF, 0 0 80px #00E5FF, 0 0 90px #00E5FF;
+        }
+
+        .search-bar {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .search-bar input[type="text"] {
+            width: 60%;
+            padding: 10px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1em;
+        }
+
+        .movie-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .movie {
+            background-color: #1E1E1E;
+            margin: 15px;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .movie img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .movie h3 {
+            margin: 10px 0;
+        }
+
+        .movie p {
+            margin: 5px 0;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #000000;
+            color: #FFFFFF;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>CK Movie HUB</h1>
-            <form action="search.php" method="GET">
-                <input type="text" name="query" placeholder="Search movies...">
-                <button type="submit">Search</button>
-            </form>
+    <div class="neon-text">CK Movie HUB</div>
+    <div class="search-bar">
+        <input type="text" placeholder="Search for movies...">
+    </div>
+    <div class="movie-list">
+        <!-- Movie 1 -->
+        <div class="movie">
+            <img src="movie1.jpg" alt="Movie 1">
+            <h3>Movie Title 1</h3>
+            <p>Release Date: 2023-01-01</p>
+            <p>IMDb: 8.5</p>
+            <p>Actors: Actor 1, Actor 2, Actor 3</p>
+            <p>Run Time: 120 mins</p>
         </div>
-    </header>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CK Movie HUB</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-    
-    <main>
-        <section class="movie-card">
-            <img src="IMG_20240725_221202_612.jpg" alt="Movie Poster" class="movie-poster">
-            <div class="movie-details">
-                <h2>Kathuru Mithuru</h2>
-                <p><strong>Release Date:</strong> 2024-04-01</p>
-                <p><strong>IMDb Rating:</strong> 7.4/10</p>
-                <p><strong>Actors:</strong> Mahendra Perera, Jayalath Manoratne, Gihan Fernando, Rodney Warnakula, Priyantha Seneviratne, Kusum Renu</p>
-                <p><strong>Runtime:</strong> 115 min</p>
-                <a href="https://t.me/your_bot_link" class="download-link">Download</a>
-            </div>
-        </section>
-    </main>
-</body>
-
-    <footer>
-        <div class="container">
-            <p>&copy; All rights reserved by CK Movie HUB</p>
-        </div>
-    </footer>
+        <!-- Add more movies as needed -->
+    </div>
+    <div class="footer">
+        &copy; 2024 CK Movie HUB. All rights reserved.
+    </div>
 </body>
 </html>
